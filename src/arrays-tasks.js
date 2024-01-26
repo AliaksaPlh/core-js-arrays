@@ -88,8 +88,8 @@ function findElement(arr, value) {
  *    findAllOccurrences([ null, undefined, null ], null) => 2
  *    findAllOccurrences([ true, 0, 1, 'true' ], true) => 1
  */
-function findAllOccurrences(/* arr, item */) {
-  throw new Error('Not implemented');
+function findAllOccurrences(arr, item) {
+  return arr.filter((element) => element === item).length;
 }
 
 /**
@@ -176,18 +176,8 @@ function getAverage(arr) {
  *    isSameLength(['cat', 'dog', 'elephant']) => false
  */
 function isSameLength(arr) {
-  const newArr = arr.map((item) => {
-    return item.length;
-  });
-  const total = newArr.reduce(function getSumm(a, b) {
-    return a + b;
-  });
-  if (total / arr.length === true) {
-    return true;
-  }
-  return false;
+  return arr.every((item) => item.length === arr[0].length);
 }
-// Check with the Set - if Set has more, then 1 element - it will mean false
 
 /**
  * Checks if there are elements in the array where the value is equal to its index.
