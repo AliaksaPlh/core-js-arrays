@@ -39,19 +39,19 @@ function getIntervalArray(start, end) {
  */
 function sumArrays(arr1, arr2) {
   if (arr1.length >= arr2.length) {
-    const newArray = arr1.map((olla, index) => {
+    const newArray = arr1.map((item, index) => {
       if (arr2[index]) {
-        olla += arr2[index];
+        const olla = item + arr2[index];
         return olla;
       }
-      return olla;
+      return item;
     });
     return newArray;
   }
   const newArray = arr2.map((item, index) => {
     if (arr1[index]) {
-      item += arr1[index];
-      return item;
+      const olla = item + arr1[index];
+      return olla;
     }
     return item;
   });
