@@ -155,7 +155,7 @@ function getStringsLength(arr) {
  */
 function getAverage(arr) {
   if (arr.length > 0) {
-    const total = arr.reduce(function getSum(a, b) {
+    const total = arr.reduce(function getSumm(a, b) {
       return a + b;
     });
     const averageOfArr =
