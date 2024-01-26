@@ -175,9 +175,19 @@ function getAverage(arr) {
  *    isSameLength(['orange', 'banana', 'cherry']) => true
  *    isSameLength(['cat', 'dog', 'elephant']) => false
  */
-function isSameLength(/* arr */) {
-  throw new Error('Not implemented');
+function isSameLength(arr) {
+  const newArr = arr.map((item) => {
+    return item.length;
+  });
+  const total = newArr.reduce(function getSumm(a, b) {
+    return a + b;
+  });
+  if (total / arr.length === true) {
+    return true;
+  }
+  return false;
 }
+// Check with the Set - if Set has more, then 1 element - it will mean false
 
 /**
  * Checks if there are elements in the array where the value is equal to its index.
